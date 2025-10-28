@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma </title>
+   
+<style>
+
+body {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #bcb4b4;
+}
+
+.titulo {
+    background-color: #ffffff;
+    padding: 25px;
+    border: 5px solid #cccccc;
+    width: 500px; 
+    text-align: left;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.soma1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #bcae0f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+hr {
+    border: black;
+    height: 1px;
+    background: #ccc;
+    margin: 15px 0;
+}
+
+#resultado {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #419eae;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="titulo">
+        <h1>soma de algarismos</h1>
+
+        <div class="soma1">
+            <label for="numero1">Numero 1:</label>
+            <input type="number" id="numero1" value="0">
+    
+            <label for="numero2">Numero 2:</label>
+            <input type="number" id="numero2" value="0">
+        </div>
+<button onclick="somarnumeros()">Somar</button>
+        <hr>
+
+        <h2>Resultado:</h2>
+        <p id="resultado">O resultado da soma é...</p>
+    </div>
+<script>
+function somarnumeros() {
+    
+    const inputNumero1 = document.getElementById('numero1');
+    const inputNumero2 = document.getElementById('numero2');
+    const numero1 = parseFloat(inputNumero1.value);
+    const numero2 = parseFloat(inputNumero2.value);
+    if (isNaN(numero1) || isNaN(numero2)) {
+        document.getElementById('resultado').textContent = "Por favor, insira números válidos.";
+        return; 
+    }
+    const soma = numero1 + numero2;
+    const resultadoElemento = document.getElementById('resultado');
+    resultadoElemento.textContent = `A soma de ${numero1} e ${numero2} é igual a: ${soma}`;
+}
+    
+</script>
+    
+</body>
+</html>
