@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #5d6570; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+.perfil {
+    background-color: #fafafa; 
+    border-radius: 10px; 
+    padding: 25px;
+    width: 100%;
+    max-width: 300px; 
+    text-align: center; 
+}
+.perfil img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 65%; 
+    object-fit: cover; 
+    border: 4px solid #4CAF50; 
+    margin-bottom: 15px;
+}
+.perfil {
+    color: #333;
+    margin: 8px 0 4px;
+    font-size: 1em;
+}
+
+.perfil h5 {
+    color: #666;
+    margin: 0 0 5px;
+    font-size: 0.9em;
+    font-weight: normal; 
+}
+
+.perfil h4 {
+    color: #173017; 
+    margin: 0 0 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+} h2
+
+.descriçao {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 5px solid #4CAF50; 
+    text-align: justify;
+}
+
+.descriçao p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+.Linguagens {
+    margin-bottom: 25px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 12px; 
+}
+
+.Linguagens span {
+    display: inline-block;
+    background-color: #e0f7fa; 
+    color: #00796b; 
+    padding: 8px 15px;
+    border-radius: 20px; 
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.Linguagens span:hover {
+    background-color: #b2ebf2;
+}
+.links {
+    display: flex;
+    justify-content: space-around; 
+    gap: 15px;
+}
+
+.links a {
+    text-decoration: none; 
+    color: #ffffff; 
+    background-color: #007bff; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    flex-grow: 1; 
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.links a:nth-child(2) {
+    background-color: #333; 
+}
+
+.links a:hover {
+    background-color: #0056b3; 
+}
+
+    </style>
+</head>
+<body>
+    <div class="perfil">
+    <img src="perfil.jpg" alt="Foto de Perfil">
+    <h2>João Gabriel</h2>
+    <h5>Número de matricula:202508201127</h5>
+    <h4>Desenvolvedor Web</h4>
+<div class="Descriçao">
+    <p>Ola, me chamo Joao Gabriel e estou no primeiro periodo do curso Ciencia da Computaçao.
+        Atualmente estou aprendendo a desenvolver e estilizar paginas web
+        utilizando o HTML e a linguagem de marcaçao CSS.
+        No momento, tenho apenas essa materia de programaçao para praticar, mas pretendo, no segundo periodo, puxar apenas materias de computaçao para aprender e desenvolver melhor 
+        novos codigos.
+        Estou gostando de desenvolver e estilizar paginas como esta pois aprendo de maneiras divertidas como criar paginas webs.
+    </p>
+</div>
+    <div class="Linguagens">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
+    <div class="links">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
