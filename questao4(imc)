@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de indice de massa corporal</title>
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #9b7979;
+    }
+    .imc {
+      background: #785d5d;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(116, 111, 111, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #312a2a;
+      font-weight: normal;
+    }
+    input, button {
+      width: 80%;
+      padding: 8px;
+      margin: 6px 2px;
+      border: 2px solid #1649b6;
+      border-radius: 2px;
+      font-size: 1em;
+    }
+    button {
+      background: #007bff;
+      color: #c1b7b7;
+      cursor: alias;
+      border: none;
+      padding-bottom: 5px;
+    }
+    
+    .resultado {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="imc">
+    <h2>Veja seu índice de massa corporal</h2>
+    <input type="number" id="peso" placeholder="Peso (kg)">
+    <input type="number" id="altura" placeholder="Altura (m)">
+    <button onclick="calcularIMC()">Indice de massa corporal</button>
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script>
+    function calcularIMC() {
+      const peso = parseFloat(document.getElementById('peso').value);
+      const altura = parseFloat(document.getElementById('altura').value);
+      if (!peso || !altura) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+      const imc = peso / (altura * altura);
+      document.getElementById('resultado').textContent = `Seu IMC é: ${imc.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
